@@ -1,0 +1,189 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+  /* overflow: hidden; */
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+/* GENERAL STYLE START */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h2,
+h3 {
+  color: #515263;
+}
+p {
+  color: #b2b2b4;
+}
+
+.container {
+  width: 1110px;
+  margin: 3rem;
+}
+/* GENERAL STYLE END */
+
+/* ----------------------------- */
+
+/* BORDERS TOP START*/
+.border-green {
+  border-top: 4px solid #45d3d3;
+}
+
+.border-red {
+  border-top: 4px solid #ea5353;
+}
+
+.border-orange {
+  border-top: 4px solid #fcaf4a;
+}
+
+.border-blue {
+  border-top: 4px solid #549ef2;
+}
+/* BORDERS TOP END*/
+
+/* ----------------------------- */
+
+/* HEADER STYLE START*/
+.heading-section h1 {
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  color: #555361;
+}
+
+.heading-section h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.heading-section p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  margin-bottom: 5rem;
+  display: inline-block;
+  width: 50%;
+}
+/* HEADER STYLE END*/
+
+/* ----------------------------- */
+
+/* CARD STYLE START*/
+.card {
+  padding: 3rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.card-info h3 {
+  font-size: 2rem;
+}
+
+.card-info p {
+  font-size: 1.4rem;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.card-icon {
+  align-self: flex-end;
+}
+/* CARD STYLE END*/
+
+/* ----------------------------- */
+
+/* GRID START*/
+.card-section {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "start mid1 end"
+    "start mid2 end";
+}
+
+.supervisor {
+  grid-area: start;
+  align-self: center;
+}
+
+.team-builder {
+  grid-area: mid1;
+}
+
+.karma {
+  grid-area: mid2;
+}
+
+.calculator {
+  grid-area: end;
+  align-self: center;
+}
+/* GRID END*/
+
+/* ----------------------------- */
+
+/* RESPONSIVE START */
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+    padding: 3rem;
+  }
+
+  .card-section {
+    display: block;
+  }
+
+  .card {
+    margin-bottom: 3rem;
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .heading-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .heading-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .heading-section p {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
+/* RESPONSIVE END */
